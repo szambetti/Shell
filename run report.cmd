@@ -17,7 +17,7 @@ echo.
 if /I "%pat%"=="\\" (
 	echo File is in a remote directory, mapping to a temporary driver to host the template. Please wait...
 	echo.
-	pushd %~dp0
+	@pushd %~dp0
 	echo Opening file...
 	echo.
 	call :checkname
@@ -29,7 +29,7 @@ if /I "%pat%"=="\\" (
 	call :exitcmd
 	)
 exit
-	
+
 :checkname
 if exist %filename% (
     echo Starting the report generator...
