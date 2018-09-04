@@ -25,7 +25,6 @@ if /I "%pat%"=="\\" (
 	call :exitcmd
 	) else (
 	call :checkname
-	echo 2
 	call :exitcmd
 	)
 exit
