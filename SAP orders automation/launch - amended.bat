@@ -2,7 +2,7 @@
 ::
 ::fBE1pAF6MU+EWHreyHcjLQlHcC22D0KAJ5ggzO3o5P6IsnE5VeszYc/0yLCLMvNT7EzocNY+2W9Im85s
 ::YAwzoRdxOk+EWAjk
-::fBw5plQjdCyDJGyX8VAjFDJgfy24HUaGIrAP4/z0/9aOoUITGus8d+8=
+::fBw5plQjdCyDJGyX8VAjFDJgfy24HUaGIrAP4/z0/9ajp14WQO0vOK3a2b+bMPMvuAu1Jaok1XVU1sIPA3s=
 ::YAwzuBVtJxjWCl3EqQJgSA==
 ::ZR4luwNxJguZRRnk
 ::Yhs/ulQjdF+5
@@ -27,7 +27,7 @@
 ::ZQ0/vhVqMQ3MEVWAtB9wSA==
 ::Zg8zqx1/OA3MEVWAtB9wSA==
 ::dhA7pRFwIByZRRnk
-::Zh4grVQjdCyDJGyX8VAjFDJgfy24HUaGIrAP4/z0/9aLo1gTV+p/KcGKlOacbuUL7yU=
+::Zh4grVQjdCyDJGyX8VAjFDJgfy24HUaGIrAP4/z0/9a8lmguYMsRX7Kb1rWbLuMbqhSqJ9h91DRfgM5s
 ::YB416Ek+ZG8=
 ::
 ::
@@ -37,6 +37,7 @@
 :: 1.0.0r : initial release
 :: 1.1.1r : fixed bug sharepoint update 18/9 (later found out it was due to tmp)
 :: 1.1.2r : changed tmp to file_tmp as tmp var is the temp dir in batch
+:: 1.2.0b : complete revamp of month change, weekly orders and added functions
 
 
 @echo off
@@ -47,7 +48,7 @@ set path=%~dp0
 set pat=%path:~0,2%
 set "filefolder=Daily Orders file source"
 set "file_tmp=$start_macro.sz"
-set "version=1.1.2r"
+set "version=1.2.0b"
 set "filename=template_%version%.xlsb"
 
 :: clears remote directory issue
