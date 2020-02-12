@@ -64,19 +64,19 @@ echo.
 echo Looking for %filename% in the '%filefolder%' subdirectory...
 echo.
 ::if file is hosted in a directory in a network drive, need to map a temp driver to launch file
-if /I "%pat%"=="\\" (
-	echo File is in a remote directory, mapping to a temporary driver to host the template. Please wait...
-	echo.
-	@pushd %path%
-	echo Opening file...
-	echo.
+::if /I "%pat%"=="\\" (
+::	echo File is in a remote directory, mapping to a temporary driver to host the template. Please wait...
+::	echo.
+::	@pushd %path%
+::	echo Opening file...
+::	echo.
+::	call :folderexists
+::	@popd
+::	call :exitcmd
+::) else (
 	call :folderexists
-	@popd
 	call :exitcmd
-) else (
-	call :folderexists
-	call :exitcmd
-	)
+	::)
 exit
 
 ::subroutines
@@ -99,7 +99,6 @@ exit
 			if exist %filename% (
 				echo Starting the report generator...
 				start /max %filename% /popup
-				C:\windows\system32\timeout /t 20 /NOBREAK >nul
 			) else (
 				echo Error: could not find %filename% in the '%filefolder%' subdirectory
 				)
